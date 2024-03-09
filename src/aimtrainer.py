@@ -43,6 +43,15 @@ class Target:
         pygame.draw.circle(win, self.second_color, (self.x, self.y), self.size * 0.4)
 
 
+def draw(win, targets):
+    win.fill(bg_color)
+
+    for target in targets:
+        target.draw(win)
+
+    pygame.display.update()
+
+
 def main():
     run = True
     targets = []
@@ -60,6 +69,11 @@ def main():
                 y = random.randint(target_padding, HEIGHT - target_padding)
                 target = Target(x, y)
                 targets.append(target)
+
+        for target in targets:
+            target.update()
+
+        draw(window, targets)
 
     pygame.quit()
 
