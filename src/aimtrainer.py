@@ -15,6 +15,7 @@ target_padding = 30
 
 bg_color = (0, 25, 40)
 
+
 class Target:
     max_size = 30
     growth_rate = 0.2
