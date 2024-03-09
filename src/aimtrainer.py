@@ -47,7 +47,7 @@ def draw(win, targets):
     win.fill(bg_color)
 
     for target in targets:
-        target.draw(win)
+        target.drawing(win)
 
     pygame.display.update()
 
@@ -64,7 +64,7 @@ def main():
                 run = False
                 break
 
-            if event.type == target_event
+            if event.type == target_event:
                 x = random.randint(target_padding, WIDTH - target_padding)
                 y = random.randint(target_padding, HEIGHT - target_padding)
                 target = Target(x, y)
